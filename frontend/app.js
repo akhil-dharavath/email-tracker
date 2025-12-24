@@ -1,3 +1,7 @@
+const API_BASE_URL = window.location.hostname === '127.0.0.1' || window.location.hostname === 'localhost' 
+    ? '' 
+    : 'https://mail-app.onrender.com';
+
 const state = {
     emails: [
         {
@@ -68,7 +72,7 @@ async function init() {
 
     try {
         // Send emails to backend for AI analysis
-        const response = await fetch('/api/analyze', {
+        const response = await fetch(`${API_BASE_URL}/api/analyze`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ emails: state.emails })
@@ -157,7 +161,7 @@ function setupEventListeners() {
         dom.emailList.innerHTML = `<div class="loading"><i class="fa-brands fa-google fa-bounce"></i> Connecting to Gmail...</div>`;
         
         try {
-            const response = await fetch('/api/sync', { method: 'POST' });
+            const response = await fetch(`${API_BASE_URL}/api/sync`, { method: 'POST' });
             const data = await response.json();
             
             if (data.status === 'no_emails') {

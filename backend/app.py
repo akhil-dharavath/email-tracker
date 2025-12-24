@@ -12,7 +12,10 @@ from feature_extractor import FeatureExtractor
 from summarizer import EmailSummarizer
 from transformers import DistilBertTokenizer
 
+from flask_cors import CORS
+
 app = Flask(__name__, static_folder='../frontend', static_url_path='')
+CORS(app) # Enable CORS for all routes (since Vercel domain is dynamic/unknown yet)
 
 # Load Models
 print("Loading models...")

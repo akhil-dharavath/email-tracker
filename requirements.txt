@@ -12,3 +12,4 @@ google-auth-httplib2
 beautifulsoup4
 gunicorn
 python-dotenv
+flask-cors
