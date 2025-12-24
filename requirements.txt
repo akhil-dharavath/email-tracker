@@ -1,0 +1,13 @@
+flask
+torch
+transformers
+pandas
+numpy
+scikit-learn
+spacy
+sentencepiece
+google-api-python-client
+google-auth-oauthlib
+google-auth-httplib2
+beautifulsoup4
+gunicorn

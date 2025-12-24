@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+.env
+
+# Mac
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
+
+# Project Specific - Sensitive
+backend/credentials.json
+backend/token.json
+
+# Models & Data
+*.pth
+*.pt
+data/
+ml/fusion_model.pth
+fusion_model.pth
+
+# Logs
+*.log

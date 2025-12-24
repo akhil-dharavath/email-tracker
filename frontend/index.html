@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fusion Mail | Intelligent Triage</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo">
+                <i class="fa-solid fa-bolt"></i> FusionMail
+            </div>
+            <nav>
+                <ul>
+                    <li class="active"><i class="fa-solid fa-inbox"></i> Inbox <span class="badge"
+                            id="inbox-count">0</span></li>
+                    <li><i class="fa-regular fa-star"></i> Important</li>
+                    <li><i class="fa-solid fa-chart-pie"></i> Analytics</li>
+                    <li><i class="fa-solid fa-gear"></i> Settings</li>
+                </ul>
+            </nav>
+            <div class="user-profile">
+                <div class="avatar">AD</div>
+                <div class="info">
+                    <span class="name">Akhil D.</span>
+                    <span class="role">Engineer</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <header class="top-bar">
+                <div class="search-bar">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="text" placeholder="Search emails...">
+                </div>
+                <div class="actions">
+                    <button class="urgency-toggle" id="gmail-sync"
+                        style="background: linear-gradient(135deg, #ea4335 0%, #c62828 100%); margin-right: 1rem;">
+                        <i class="fa-brands fa-google"></i> Sync Gmail
+                    </button>
+                    <button class="urgency-toggle" id="urgency-toggle">
+                        <i class="fa-solid fa-fire"></i> Sort by Urgency: <span id="urgency-state">OFF</span>
+                    </button>
+                    <button class="icon-btn"><i class="fa-regular fa-bell"></i></button>
+                </div>
+            </header>
+
+            <div class="inbox-header">
+                <h2>Inbox</h2>
+                <div class="filters">
+                    <span class="filter active">All</span>
+                    <span class="filter">Unread</span>
+                    <span class="filter">Urgent</span>
+                </div>
+            </div>
+
+            <div class="email-list" id="email-list">
+                <!-- Emails will be injected here via JS -->
+                <div class="loading">
+                    <i class="fa-solid fa-circle-notch fa-spin"></i> Loading AI Triage...
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Script -->
+    <script src="app.js"></script>
+</body>
+
+</html>
