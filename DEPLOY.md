@@ -46,7 +46,7 @@ This application uses a separate Frontend (Vercel) and Backend (Render).
 
 3.  **Environment Connectivity**:
     - The frontend automatically detects if it's running on `localhost`.
-    - If running on Vercel, it connects to: `https://mail-app.onrender.com` (Hardcoded for this request).
+    - If running on Vercel, it connects to: `https://fusion-mail-app.onrender.com`.
     - *To change this in the future, edit `frontend/app.js` constant `API_BASE_URL`.*
 
 4.  **Deploy**:
