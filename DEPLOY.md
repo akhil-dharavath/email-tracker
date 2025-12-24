@@ -24,11 +24,14 @@ This application uses Flask and TensorFlow/PyTorch.
     - **Start Command**: `gunicorn backend.app:app` (Note: we updated Procfile to `cd backend && gunicorn app:app`, but Render might need manual Start Command if it ignores Procfile. Try `cd backend && gunicorn app:app`).
 
 3.  **Environment Variables / Secrets**:
-    - You CANNOT upload files directly.
-    - **Option A (Easy)**: Run the app LOCALLY first. Complete the "Sync Gmail" step. Copay the generated `token.json` content.
-    - On Render, go to **Environment** -> **Secret Files**.
-    - Add `backend/token.json` and paste the content.
-    - Add `backend/credentials.json` and paste the content.
+    - Go to **Environment** in Render dashboard.
+    - Add the following variables (copy values from your local `.env`):
+        - `GOOGLE_CLIENT_ID`
+        - `GOOGLE_CLIENT_SECRET`
+        - `GOOGLE_PROJECT_ID`
+        - `GOOGLE_TOKEN_JSON` (Paste the entire JSON string)
+    
+    - **Alternative**: You can still upload your `.env` file as a "Secret File" named `.env` if you prefer that over individual variables.
 
 4.  **Deploy**:
     - Click **Create Web Service**.

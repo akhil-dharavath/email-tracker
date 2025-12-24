@@ -117,14 +117,56 @@ def sync_gmail():
     from gmail_client import GmailClient
     
     from gmail_client import GmailClient
+    from dotenv import load_dotenv
+    import json
     
+    # Load .env
+    load_dotenv(os.path.join(os.path.dirname(__file__), '..', '.env'))
+
     try:
-        # Use absolute path relative to this file to find credentials.json
-        base_dir = os.path.dirname(__file__)
-        creds_path = os.path.join(base_dir, 'credentials.json')
-        token_path = os.path.join(base_dir, 'token.json')
+        # 1. Try Config from Environment
+        client_config = None
+        token_data = None
         
-        client = GmailClient(credentials_path=creds_path, token_path=token_path)
+        if os.getenv('GOOGLE_CLIENT_ID') and os.getenv('GOOGLE_CLIENT_SECRET'):
+             client_config = {
+                "installed": {
+                    "client_id": os.getenv('GOOGLE_CLIENT_ID'),
+                    "client_secret": os.getenv('GOOGLE_CLIENT_SECRET'),
+                    "project_id": os.getenv('GOOGLE_PROJECT_ID'),
+                    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+                    "token_uri": "https://oauth2.googleapis.com/token",
+                    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+                    "redirect_uris": ["http://localhost"]
+                }
+             }
+        
+        if os.getenv('GOOGLE_TOKEN_JSON'):
+            try:
+                token_data = json.loads(os.getenv('GOOGLE_TOKEN_JSON'))
+            except Exception as e:
+                print(f"Error parsing GOOGLE_TOKEN_JSON from env: {e}")
+        
+        # 2. Config File Paths (Fallback & Persistence)
+        base_dir = os.path.dirname(__file__)
+        project_root = os.path.dirname(base_dir)
+        
+        def find_config_path(filename):
+            path = os.path.join(base_dir, filename)
+            if os.path.exists(path): return path
+            path = os.path.join(project_root, filename)
+            if os.path.exists(path): return path
+            return os.path.join(base_dir, filename)
+
+        creds_path = find_config_path('credentials.json')
+        token_path = find_config_path('token.json')
+        
+        client = GmailClient(
+            client_config=client_config, 
+            token_data=token_data,
+            credentials_path=creds_path, 
+            token_path=token_path
+        )
         # This will trigger browser auth on server side if not token exists
         # For a local app, this opens a browser window.
         raw_emails = client.fetch_emails(max_results=10)

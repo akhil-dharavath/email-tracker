@@ -13,14 +13,25 @@ from googleapiclient.errors import HttpError
 SCOPES = ['https://www.googleapis.com/auth/gmail.readonly']
 
 class GmailClient:
-    def __init__(self, credentials_path='credentials.json', token_path='token.json'):
+    def __init__(self, client_config=None, token_data=None, credentials_path=None, token_path=None):
+        self.client_config = client_config
+        self.token_data = token_data
         self.credentials_path = credentials_path
         self.token_path = token_path
         self.service = None
 
     def authenticate(self):
         creds = None
-        if os.path.exists(self.token_path):
+        
+        # 1. Try loading from dictionary (Env Var source)
+        if self.token_data:
+            try:
+                creds = Credentials.from_authorized_user_info(self.token_data, SCOPES)
+            except Exception:
+                creds = None
+
+        # 2. Try loading from file
+        if not creds and self.token_path and os.path.exists(self.token_path):
             try:
                 creds = Credentials.from_authorized_user_file(self.token_path, SCOPES)
             except Exception:
@@ -36,19 +47,28 @@ class GmailClient:
                     creds = None
             
             if not creds:
-                if not os.path.exists(self.credentials_path):
-                    raise FileNotFoundError(f"Could not find {self.credentials_path}. Please download it from Google Cloud Console.")
+                # Flow from Config Dict (Env) or File
+                flow = None
+                if self.client_config:
+                    flow = InstalledAppFlow.from_client_config(self.client_config, SCOPES)
+                elif self.credentials_path and os.path.exists(self.credentials_path):
+                    flow = InstalledAppFlow.from_client_secrets_file(self.credentials_path, SCOPES)
+                else:
+                     raise FileNotFoundError(f"Could not find credentials in Env or at {self.credentials_path}")
                 
                 try:
-                    flow = InstalledAppFlow.from_client_secrets_file(
-                        self.credentials_path, SCOPES)
                     creds = flow.run_local_server(port=0)
                 except Exception as e:
                     raise Exception(f"Authentication failed. Details: {e}")
             
-            # Save the credentials for the next run
-            with open(self.token_path, 'w') as token:
-                token.write(creds.to_json())
+            # Save the credentials for the next run (file persistence if path provided)
+            # We also might want to print the JSON for the user to put in ENV if no file path
+            if self.token_path:
+                with open(self.token_path, 'w') as token:
+                    token.write(creds.to_json())
+            else:
+                 print("\n[INFO] Generated Token JSON (Add this to your .env as GOOGLE_TOKEN_JSON):")
+                 print(creds.to_json())
 
         try:
             self.service = build('gmail', 'v1', credentials=creds)

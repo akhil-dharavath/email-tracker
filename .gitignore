@@ -16,8 +16,8 @@ env/
 .idea/
 
 # Project Specific - Sensitive
-backend/credentials.json
-backend/token.json
+# Now using .env, ensure these don't get tracked if present
+.env
 
 # Models & Data
 *.pth
