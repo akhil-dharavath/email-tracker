@@ -1,0 +1,14 @@
+
+Model Performance Report
+------------------------
+Accuracy:  1.0000
+Precision: 1.0000
+Recall:    1.0000
+F1-Score:  1.0000
+ROC-AUC:   1.0000
+
+Confusion Matrix:
+[[14  0  0  0]
+ [ 0  3  0  0]
+ [ 0  0 11  0]
+ [ 0  0  0 12]]
