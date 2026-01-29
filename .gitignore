@@ -29,3 +29,5 @@ fusion_model.pth
 
 # Logs
 *.log
+
+/backend/token.json
