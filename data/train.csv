@@ -1,0 +1,244 @@
+text,label
+"I am extremely angry about this delay!",0
+"This is ridiculous and unacceptable service.",0
+"I demand an explanation for this error immediately.",0
+"Why has this not been fixed yet? I am furious.",0
+"I am nice and calm but this is actually making me angry.",0
+"This repeated failure is making me lose patience.",0
+"I am very upset with how this issue was handled.",0
+"This mistake should never have happened.",0
+"I am frustrated beyond words right now.",0
+"This delay has caused serious problems for us.",0
+"I cannot believe how careless this was.",0
+"This situation is unacceptable.",0
+"I want this resolved immediately.",0
+"I am tired of following up again and again.",0
+"This is the worst service I have experienced.",0
+"Your response is completely unsatisfactory.",0
+"I am angry that no one informed us earlier.",0
+"This is extremely disappointing.",0
+"I expect a proper explanation now.",0
+"This negligence is infuriating.",0
+"This delay is absolutely unacceptable.",0
+"I am furious about the lack of response.",0
+"This problem should have been fixed long ago.",0
+"I am extremely irritated by this behavior.",0
+"Your negligence is causing serious frustration.",0
+"I am fed up with these repeated excuses.",0
+"This is a complete failure from your side.",0
+"I cannot tolerate this inefficiency anymore.",0
+"This issue has crossed all limits.",0
+"I am angry about how casually this was handled.",0
+"This delay is inexcusable.",0
+"I am very disappointed with the service.",0
+"This has wasted a lot of my time.",0
+"I am annoyed by the constant delays.",0
+"This response is totally unacceptable.",0
+"I am upset that this was ignored.",0
+"This mistake is very frustrating.",0
+"I am angry that no action was taken.",0
+"This situation is extremely irritating.",0
+"I demand this to be resolved immediately.",0
+"Your team has been careless.",0
+"This kind of delay is not acceptable.",0
+"I am losing my patience now.",0
+"This has been handled very poorly.",0
+"I am angry about the lack of accountability.",0
+"The service quality has dropped drastically.",0
+"This issue should never have occurred.",0
+"I am upset with how slow the process is.",0
+"This has caused unnecessary trouble.",0
+"I am angry about the repeated failures.",0
+"This problem keeps happening again and again.",0
+"I am extremely unhappy with this outcome.",0
+"This response is frustrating.",0
+"I am annoyed that nobody informed me.",0
+"This shows poor management.",0
+"I am angry that deadlines were ignored.",0
+"This delay is ridiculous.",0
+"I am upset with the lack of transparency.",0
+"This has affected our work badly.",0
+"I am furious about the careless approach.",0
+
+"I am really worried about the deadline tomorrow.",1
+"Can you please check this urgency? I am anxious.",1
+"I fear we made a huge mistake in the report.",1
+"Please help me, I am panicking about the results.",1
+"I am nervous that the client will reject this.",1
+"I am stressed about the upcoming review.",1
+"This issue is making me very uneasy.",1
+"I am concerned about how this will impact the project.",1
+"I am not confident this will be approved.",1
+"I am feeling anxious about the final outcome.",1
+"This delay is worrying me a lot.",1
+"I am afraid we might miss the timeline.",1
+"I am unsure if everything is correct.",1
+"This situation is causing me stress.",1
+"I am overthinking this problem.",1
+"I am worried this might escalate.",1
+"I feel uneasy about the next steps.",1
+"This uncertainty is making me nervous.",1
+"I am anxious about the response we will receive.",1
+"I am concerned about possible consequences.",1
+"I am worried about the upcoming deadline.",1
+"This issue is making me very anxious.",1
+"I am concerned about the final approval.",1
+"I feel nervous about the outcome.",1
+"This delay is stressing me out.",1
+"I am afraid this might go wrong.",1
+"I am unsure if everything is correct.",1
+"I am anxious about the client feedback.",1
+"This situation is worrying me a lot.",1
+"I feel uneasy about this decision.",1
+"I am concerned about possible risks.",1
+"This uncertainty is making me nervous.",1
+"I am stressed about meeting expectations.",1
+"I fear this might create problems.",1
+"I am worried about the impact of this delay.",1
+"I am anxious about tomorrow’s presentation.",1
+"I am not confident about the results.",1
+"This issue is causing a lot of tension.",1
+"I feel pressure because of this delay.",1
+"I am worried things may escalate.",1
+"I am concerned about missing the deadline.",1
+"I feel anxious waiting for confirmation.",1
+"This is making me overthink everything.",1
+"I am stressed about the next steps.",1
+"I am worried about client dissatisfaction.",1
+"I feel uneasy not knowing the status.",1
+"I am anxious about potential consequences.",1
+"This situation is making me uncomfortable.",1
+"I am worried about the quality of the output.",1
+"I am concerned about delays affecting delivery.",1
+"I feel anxious about follow-up actions.",1
+"This uncertainty is stressful.",1
+"I am nervous about the review process.",1
+"I am worried about team performance.",1
+"I feel anxious about last-minute changes.",1
+"I am concerned about unresolved issues.",1
+"This delay is making me anxious.",1
+"I am unsure how this will be received.",1
+"I am stressed about upcoming deadlines.",1
+"I feel pressure due to time constraints.",1
+
+"Here is the report you requested.",2
+"Let's meet tomorrow at 10 AM.",2
+"Please find the attached invoice.",2
+"The meeting has been rescheduled to Friday.",2
+"Just checking in on the status of the ticket.",2
+"Please review the document when you have time.",2
+"The files have been uploaded successfully.",2
+"Kindly let me know if changes are needed.",2
+"The task has been completed as discussed.",2
+"This is a follow-up on our last conversation.",2
+"Sharing the details discussed earlier.",2
+"The update has been deployed to production.",2
+"The system is currently operational.",2
+"We will proceed as planned.",2
+"The data has been verified.",2
+"Please confirm receipt of this message.",2
+"This email is for your information.",2
+"The request has been logged.",2
+"We are awaiting further instructions.",2
+"The issue is under review.",2
+"The report has been submitted.",2
+"The meeting is scheduled for tomorrow.",2
+"Please review the attached document.",2
+"The task has been completed.",2
+"This is a status update.",2
+"The files were uploaded successfully.",2
+"Please let me know if changes are required.",2
+"The issue is currently under review.",2
+"This is a follow-up message.",2
+"The deployment was completed.",2
+"The invoice has been shared.",2
+"Please confirm receipt.",2
+"The system is functioning normally.",2
+"We are waiting for further instructions.",2
+"The update has been applied.",2
+"The data has been verified.",2
+"This message is for your information.",2
+"The process is ongoing.",2
+"The task is in progress.",2
+"Sharing the requested details.",2
+"The issue has been logged.",2
+"Please see the comments below.",2
+"The request was processed.",2
+"The schedule remains unchanged.",2
+"We will proceed as planned.",2
+"The document has been reviewed.",2
+"The changes were implemented.",2
+"The status remains the same.",2
+"The files are ready for review.",2
+"This is a routine update.",2
+"The system update is complete.",2
+"The task was assigned.",2
+"The report is attached.",2
+"The timeline has been shared.",2
+"The information was forwarded.",2
+"The process is complete.",2
+"The issue is being monitored.",2
+"Please check and confirm.",2
+"The request is pending approval.",2
+"This concludes the update.",2
+
+"I am so happy with the progress we made!",3
+"Great job team! This looks fantastic.",3
+"I am thrilled to announce our success.",3
+"Thank you so much for your hard work.",3
+"This is wonderful news, congrats!",3
+"I am very pleased with the outcome.",3
+"The results exceeded my expectations.",3
+"This is a great achievement for the team.",3
+"I am excited about the next phase.",3
+"Everything went perfectly!",3
+"Fantastic work everyone!",3
+"This makes me really happy.",3
+"I appreciate all the effort put into this.",3
+"The client is very happy with the delivery.",3
+"This is a big win for us.",3
+"I am delighted with the final result.",3
+"Excellent execution overall.",3
+"This project turned out great.",3
+"I am proud of the entire team.",3
+"Looking forward to future success together.",3
+"I am very happy with the progress.",3
+"Great work by the entire team!",3
+"This is an excellent result.",3
+"I am delighted with the outcome.",3
+"Everything went smoothly.",3
+"Fantastic effort from everyone.",3
+"This makes me really happy.",3
+"I appreciate the hard work.",3
+"The results are impressive.",3
+"I am pleased with the delivery.",3
+"This is a great achievement.",3
+"Wonderful job on this task.",3
+"I am excited about the success.",3
+"The outcome exceeded expectations.",3
+"Great collaboration by the team.",3
+"This is very satisfying.",3
+"I am happy with the improvements.",3
+"The client is pleased with the work.",3
+"This turned out really well.",3
+"Excellent execution overall.",3
+"I am proud of this achievement.",3
+"This is good news.",3
+"The progress is encouraging.",3
+"I am thankful for the support.",3
+"This is a positive outcome.",3
+"Great progress so far.",3
+"I am satisfied with the results.",3
+"This is a big success.",3
+"Very happy with the solution.",3
+"The response has been great.",3
+"I am impressed by the quality.",3
+"Everything looks perfect.",3
+"This makes me confident.",3
+"I am glad we achieved this.",3
+"Great job delivering on time.",3
+"This outcome is pleasing.",3
+"I am excited for next steps.",3
+"This is a strong result.",3
+"Excellent teamwork.",3
+"Really happy with this update.",3

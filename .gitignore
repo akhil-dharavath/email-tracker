@@ -22,7 +22,8 @@ env/
 # Models & Data
 *.pth
 *.pt
-data/
+data/*
+!data/train.csv
 ml/fusion_model.pth
 fusion_model.pth
 

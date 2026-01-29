@@ -239,5 +239,21 @@ def sync_gmail():
         print(f"Gmail Sync Error: {e}")
         return jsonify({"error": str(e)}), 500
 
+@app.route('/api/feedback', methods=['POST'])
+def save_feedback():
+    data = request.json
+    # { email_id, text, urgency_label }
+    
+    record = {
+        "id": data["email_id"],
+        "text": data["text"],
+        "urgency_label": data["urgency_label"],
+        "timestamp": data.get("timestamp"),
+        "sender": data.get("sender")
+    }
+    
+    save_to_db(record)
+    return jsonify({"status": "saved"})
+
 if __name__ == '__main__':
     app.run(debug=True, port=9000)
